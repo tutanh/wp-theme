@@ -73,6 +73,7 @@ if ( post_password_required() ) {
 		comment_form( array(
 			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
 			'title_reply_after'  => '</h2>',
+            'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label> <textarea id="comment" name="comment" cols="45" rows="4" maxlength="65525" required="required"></textarea></p>'
 		) );
 	?>
 
