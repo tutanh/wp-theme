@@ -56,7 +56,7 @@
 				}
 				?>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tutanh' ) ); ?>" class="imprint">
-					<?php printf(__('Copyrights © 2018 %s. All Rights Reserved.', 'tutanh'), get_bloginfo('name', 'display') ); ?>
+					<?php printf(__('Copyright © 2018 %s. All Rights Reserved.', 'tutanh'), get_bloginfo('name', 'display') ); ?>
 				</a>
 			</div><!-- .site-info -->
 		</footer><!-- .site-footer -->
