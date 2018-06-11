@@ -42,12 +42,12 @@ function twentysixteen_entry_meta() {
 	}
 
 	if ( 'post' === get_post_type() ) {
-		twentysixteen_entry_taxonomies();
+//		twentysixteen_entry_taxonomies();
 	}
 
 	if ( ! is_singular() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'twentysixteen' ), get_the_title() ) );
+		comments_popup_link( sprintf( __( 'No comments', 'twentysixteen' ), get_the_title() ) );
 		echo '</span>';
 	}
 }

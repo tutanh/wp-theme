@@ -1,4 +1,4 @@
-=== Twenty Sixteen ===
+=== Tutanh Theme ===
 Contributors: the WordPress team
 Requires at least: WordPress 4.4
 Tested up to: WordPress 5.0-trunk

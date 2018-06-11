@@ -1,10 +1,10 @@
 /*
-Theme Name: Twenty Sixteen
-Theme URI: https://wordpress.org/themes/twentysixteen/
-Author: the WordPress team
+Theme Name: Tutanh Theme
+Theme URI: https://localhost
+Author: the WordPress team. Modified by Anton Rogozin
 Author URI: https://wordpress.org/
-Description: Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere.
-Version: 1.5
+Description: For my personal website.
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
@@ -754,7 +754,7 @@ a:active {
 	outline: 0;
 }
 
-.entry-content a,
+.entry-content a:not(.more-link),
 .entry-summary a,
 .taxonomy-description a,
 .logged-in-as a,
@@ -766,8 +766,8 @@ a:active {
 	box-shadow: 0 1px 0 0 currentColor;
 }
 
-.entry-content a:hover,
-.entry-content a:focus,
+.entry-content a:not(.more-link):hover,
+.entry-content a:not(.more-link):focus,
 .entry-summary a:hover,
 .entry-summary a:focus,
 .taxonomy-description a:hover,
@@ -793,7 +793,7 @@ a:active {
 	-webkit-flex: 0 1 100%;
 	-ms-flex: 0 1 100%;
 	flex: 0 1 100%;
-	margin: 0.875em 0;
+	margin: 10px 0;
 }
 
 .site-header-menu.toggled-on,
@@ -824,12 +824,13 @@ a:active {
 	display: block;
 	line-height: 1.3125;
 	outline-offset: -1px;
-	padding: 0.84375em 0;
+	padding: 0.84375em 10px;
 }
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-	color: #007acc;
+	color: #1a1a1a !important;
+	background-color: #eeeeee;
 }
 
 .main-navigation .current-menu-item > a,
@@ -1568,10 +1569,14 @@ blockquote:after,
  */
 
 .site-header {
-	padding: 2.625em 7.6923%;
+	padding: 21px 7.6923%;
 }
 
-.site-header-main {
+.header-container {
+	position: relative;
+}
+
+.site-header-main .lefttop-branding {
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	align-items: center;
@@ -1583,8 +1588,19 @@ blockquote:after,
 	flex-wrap: wrap;
 }
 
+.lefttop-branding {
+	position: absolute;
+	left: 21px;
+	top: 21px;
+}
+
+.rightbottom-header {
+	right: 21px;
+	bottom: 21px;
+}
+
 .site-branding {
-	margin: 0.875em auto 0.875em 0;
+	margin: 0 0 0 0;
 	/* Avoid overflowing wide custom logo in small screens in Firefox and IEs */
 	max-width: 100%;
 	min-width: 0;
@@ -1614,7 +1630,7 @@ blockquote:after,
 
 .site-branding .site-title a:hover,
 .site-branding .site-title a:focus {
-	color: #007acc;
+	color: #333333;
 }
 
 .wp-custom-logo .site-title {
@@ -1622,7 +1638,7 @@ blockquote:after,
 }
 
 .site-description {
-	color: #686868;
+	color: #999999;
 	display: none;
 	font-size: 13px;
 	font-size: 0.8125rem;
@@ -1637,7 +1653,7 @@ blockquote:after,
 	color: #1a1a1a;
 	font-size: 13px;
 	font-size: 0.8125rem;
-	margin: 1.076923077em 0;
+	margin: 10px 0;
 	padding: 0.769230769em;
 }
 
@@ -1670,17 +1686,18 @@ blockquote:after,
 
 .header-image {
 	clear: both;
-	margin: 0.875em 0;
+	margin: 0 0;
 }
 
 .header-image a {
 	display: block;
 }
-
+/*
 .header-image a:hover img,
 .header-image a:focus img {
 	opacity: 0.85;
 }
+*/
 
 /**
  * 11.2 - Posts and pages
@@ -1715,7 +1732,7 @@ blockquote:after,
 
 .entry-title a:hover,
 .entry-title a:focus {
-	color: #007acc;
+	color: #555555;
 }
 
 .post-thumbnail {
@@ -1940,6 +1957,15 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .more-link {
 	white-space: nowrap;
+	box-shadow: none;
+	color: #686868;
+}
+
+.more-link:hover,
+.more-link:focus {
+	box-shadow: 0 1px 0 0 currentColor;
+	color: #003377;
+
 }
 
 .author-info {
@@ -1984,9 +2010,12 @@ body:not(.search-results) .entry-summary > :last-child,
 	white-space: nowrap;
 }
 
-.entry-footer {
+.entry-footer, .more-link {
 	color: #686868;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
+}
+
+.entry-footer {
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1.6153846154;
@@ -2003,7 +2032,7 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .entry-footer a:hover,
 .entry-footer a:focus {
-	color: #007acc;
+	color: #003377;
 }
 
 .entry-footer > span:not(:last-child):after {
@@ -2789,13 +2818,13 @@ p > video {
 	}
 
 	.site-header {
-		padding: 3.9375em 7.6923%;
+		padding: 21px 7.6923%;
 	}
 
-	.site-branding {
+/*	.site-branding {
 		margin-top: 1.3125em;
 		margin-bottom: 1.3125em;
-	}
+	}*/
 
 	.custom-logo {
 		max-width: 210px;
@@ -2818,12 +2847,12 @@ p > video {
 	.menu-toggle {
 		font-size: 16px;
 		font-size: 1.0rem;
-		margin: 1.3125em 0;
+		margin: 10px 0;
 		padding: 0.8125em 0.875em 0.6875em;
 	}
 
 	.site-header-menu {
-		margin: 1.3125em 0;
+		margin: 10px 0;
 	}
 
 	.site-header .main-navigation + .social-navigation {
@@ -2831,7 +2860,7 @@ p > video {
 	}
 
 	.header-image {
-		margin: 1.3125em 0;
+		margin: 0 0;
 	}
 
 	.pagination {
@@ -2994,13 +3023,13 @@ p > video {
 		padding-left: 4.5455%;
 	}
 
-	.site-header-main {
+	.site-header-main .lefttop-branding{
 		-webkit-align-items: flex-start;
 		-ms-flex-align: start;
 		align-items: flex-start;
 	}
 
-	.wp-custom-logo .site-header-main {
+	.wp-custom-logo .site-header-main .lefttop-branding {
 		-webkit-align-items: center;
 		-ms-flex-align: center;
 		align-items: center;
@@ -3387,7 +3416,7 @@ p > video {
 	}
 
 	.site-info {
-		margin: 0.538461538em auto 0.538461538em 0;
+		margin: 0.538461538em 0 0.538461538em auto;
 		-webkit-order: 1;
 		-ms-flex-order: 1;
 		order: 1;
@@ -3410,8 +3439,8 @@ p > video {
 	.no-sidebar .page-header,
 	.no-sidebar .page-content,
 	.no-sidebar .content-bottom-widgets {
-		margin-right: 15%;
-		margin-left: 15%;
+		margin-right: 2%;
+		margin-left: 2%;
 	}
 
 	.widecolumn {
@@ -3431,12 +3460,11 @@ p > video {
 	}
 
 	.site-header {
-		padding: 5.25em 4.5455%;
+		padding: 21px 4.5455%;
 	}
 
 	.site-branding,
-	.site-header-menu,
-	.header-image {
+	.site-header-menu {
 		margin-top: 1.75em;
 		margin-bottom: 1.75em;
 	}
@@ -3570,8 +3598,8 @@ p > video {
 	}
 
 	body:not(.search-results) article:not(.type-page) .entry-content {
-		float: right;
-		width: 71.42857144%;
+/*		float: right;
+		width: 71.42857144%; */
 	}
 
 	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
@@ -3632,15 +3660,15 @@ p > video {
 	}
 
 	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-content {
-		float: left;
+/*		float: left;
 		margin-right: -100%;
 		margin-left: 34.99999999%;
-		width: 50.00000001%;
+		width: 50.00000001%; */
 	}
 
 	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-footer {
-		margin-right: -100%;
-		margin-left: 15%;
+		margin-right: 10px;
+		margin-left: 10px;
 		width: 15%;
 	}
 }
@@ -3962,12 +3990,12 @@ p > video {
 	.site-header {
 		padding: 0 0 1.75em;
 	}
-
+/*
 	.site-branding {
 		margin-top: 0;
 		margin-bottom: 1.75em;
 	}
-
+*/
 	.site-main {
 		margin-bottom: 3.5em;
 	}
