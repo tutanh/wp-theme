@@ -1689,17 +1689,15 @@ blockquote:after,
 .header-image {
 	clear: both;
 	margin: 0 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    padding: 0px
 }
 
 .header-image a {
 	display: block;
 }
-/*
-.header-image a:hover img,
-.header-image a:focus img {
-	opacity: 0.85;
-}
-*/
 
 /**
  * 11.2 - Posts and pages
@@ -2912,7 +2910,7 @@ p > video {
 	.page-header,
 	.page-content,
 	.content-bottom-widgets {
-		margin-right: 23.0769%;
+		margin-right: 7.6923%;
 	}
 
 	.entry-title {
@@ -3439,7 +3437,6 @@ p > video {
 		width: 100%;
 	}
 
-	.no-sidebar .entry-header,
 	.no-sidebar .entry-content,
 	.no-sidebar .entry-summary,
 	.no-sidebar .entry-footer,
@@ -3453,6 +3450,11 @@ p > video {
 		margin-right: 2%;
 		margin-left: 2%;
 	}
+
+    .no-sidebar .entry-header {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
 
 	.widecolumn {
 		padding-right: 15%;
