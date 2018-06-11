@@ -2444,6 +2444,29 @@ body.search-no-results .page-header {
 	text-transform: none;
 }
 
+.disclaimer {
+	border-style: none;
+	background-color: #ffffdd;
+}
+
+.disclaimer .disclaimer_excl {
+	font-size: 400%;
+	padding: 10px;
+	color: #770000;
+	width: 10%;
+	text-align: center;
+	border-style: none
+}
+
+.disclaimer .disclaimer_text {
+	padding: 10px;
+	border-style: none
+}
+
+.imprint {
+	float: right;
+}
+
 /**
  * 11.5 - Sidebar
  */

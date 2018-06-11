@@ -39,6 +39,18 @@
 			<?php endif; ?>
 
 			<div class="site-info">
+
+                <?php if ( tutanh_has_disclaimer_text() ) : ?>
+                    <div>
+                        <table class="disclaimer">
+                            <tr>
+                                <td class="disclaimer_excl"><b>!</b></td>
+                                <td class="disclaimer_text"><?php echo tutanh_get_disclaimer_text(); ?></td>
+                            </tr>
+                        </table>
+                    </div>
+                <?php endif; ?>
+
 				<?php
 					/**
 					 * Fires before the tutanh footer text for footer customization.

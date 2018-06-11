@@ -184,6 +184,26 @@ function tutanh_customize_register( $wp_customize ) {
 		'label'       => __( 'Secondary Text Color', 'tutanh' ),
 		'section'     => 'colors',
 	) ) );
+
+    /**
+     * Disclaimer
+     */
+    $wp_customize->add_setting( 'tutanh_footer_disclaimer_text' , array(
+        'default' => '',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_section( 'tutanh_footer_disclaimer_section' , array(
+        'title'      => __( 'Disclaimer', 'tutanh' ),
+        'priority'   => 30,
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'disclaimer_text', array(
+        'label'      => __( 'Disclaimer Text', 'tutanh' ),
+        'section'    => 'tutanh_footer_disclaimer_section',
+        'settings'   => 'tutanh_footer_disclaimer_text',
+        'type'       => 'textarea',
+    ) ) );
 }
 add_action( 'customize_register', 'tutanh_customize_register', 11 );
 
@@ -1191,3 +1211,11 @@ function tutanh_secondary_text_color_css() {
 	wp_add_inline_style( 'tutanh-style', sprintf( $css, $secondary_text_color ) );
 }
 add_action( 'wp_enqueue_scripts', 'tutanh_secondary_text_color_css', 11 );
+
+function tutanh_get_disclaimer_text() {
+    return get_theme_mod('tutanh_footer_disclaimer_text', 'default');
+}
+
+function tutanh_has_disclaimer_text() {
+    return !empty(tutanh_get_disclaimer_text());
+}
