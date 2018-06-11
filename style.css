@@ -3463,9 +3463,13 @@ p > video {
 		padding: 21px 4.5455%;
 	}
 
-	.site-branding,
+	.site-branding {
+		margin-top: 0;
+		margin-bottom: 1.75em;
+	}
+
 	.site-header-menu {
-		margin-top: 1.75em;
+		margin-top: 10px;
 		margin-bottom: 1.75em;
 	}
 
