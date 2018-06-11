@@ -2455,12 +2455,14 @@ body.search-no-results .page-header {
 	color: #770000;
 	width: 10%;
 	text-align: center;
-	border-style: none
+	border-style: none;
+	cursor: default;
+
 }
 
 .disclaimer .disclaimer_text {
 	padding: 10px;
-	border-style: none
+	border-style: none;
 }
 
 .imprint {
