@@ -1964,6 +1964,7 @@ body:not(.search-results) .entry-summary > :last-child,
 	white-space: nowrap;
 	box-shadow: none;
 	color: #686868;
+	line-height: 2.5;
 }
 
 .more-link:hover,
