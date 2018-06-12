@@ -267,6 +267,17 @@ optgroup {
  * 2.0 - Genericons
  */
 
+@font-face {
+    font-family: 'Grands';
+    src:url('iconfont/Grands.eot');
+    src:url('iconfont/Grands.eot?#iefix') format('embedded-opentype'),
+    url('iconfont/Grands.svg#Grands') format('svg'),
+    url('iconfont/Grands.woff') format('woff'),
+    url('iconfont/Grands.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .menu-item-has-children a:after,
 .social-navigation a:before,
 .dropdown-toggle:after,
@@ -1051,6 +1062,15 @@ a:active {
 
 .social-navigation a[href$="/feed/"]:before {
 	content: "\f413";
+}
+
+.social-navigation a[href*="vk.com"]:before {
+    font-family: 'Grands';
+    font-style: normal;
+    speak: none;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    content: "\e003";
 }
 
 .post-navigation {
