@@ -2491,12 +2491,39 @@ body.search-no-results .page-header {
 }
 
 .bordered-img {
-	border-style: solid;
-	border-width: 1px;
-	border-color: black;
+	border: 1px solid black;
 	padding: 0;
 }
 
+.img-auto-size {
+	max-width: 100%;
+	height: auto;
+}
+
+.img-caption-table {
+	border-spacing: 0;
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: auto;
+}
+
+.img-caption-td {
+	padding: 0;
+	line-height: 0;
+	border-style: none;
+}
+
+.img-caption-tr {
+	line-height: 1;
+}
+
+.img-caption-td-b {
+	border: 1px none black;
+	border-top-style: solid;
+	padding: 2px 10px 2px 2px;
+	text-align: right;
+	background-color: #333333;
+}
 
 /**
  * 11.5 - Sidebar
