@@ -2493,6 +2493,7 @@ body.search-no-results .page-header {
 .bordered-img {
 	border: 1px solid black;
 	padding: 0;
+	margin-bottom: 10px;
 }
 
 .img-auto-size {
