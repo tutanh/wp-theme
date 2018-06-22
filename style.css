@@ -1644,6 +1644,14 @@ blockquote:after,
 	margin: 0;
 }
 
+.site-title, .site-description {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .site-branding .site-title a {
 	color: #1a1a1a;
 }
