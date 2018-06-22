@@ -3030,6 +3030,7 @@ p > video {
 	.entry-summary ol,
 	.comment-content ol {
 		margin-left: 0;
+		padding-left: 20px;
 	}
 
 	.entry-content li > ul,
