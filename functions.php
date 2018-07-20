@@ -288,6 +288,21 @@ function tutanh_scripts() {
 add_action( 'wp_enqueue_scripts', 'tutanh_scripts' );
 
 /**
+ * Add supported mime types
+ *
+ * @param array $mimes
+ * @return array
+ */
+function tutanh_upload_mimes($mimes = array()) {
+
+    // Add a key and value for the CSV file type
+    $mimes['svg'] = "image/svg+xml";
+
+    return $mimes;
+}
+add_action('upload_mimes', 'tutanh_upload_mimes');
+
+/**
  * Adds custom classes to the array of body classes.
  *
  * @since Twenty Sixteen 1.0
