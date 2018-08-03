@@ -67,7 +67,7 @@
 					the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
 				}
 				?>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tutanh' ) ); ?>" class="imprint">
+				<a href="<?php echo esc_url( __( '/', 'tutanh' ) ); ?>" class="imprint">
 					<?php printf(__('Copyright © 2018 %s. All Rights Reserved.', 'tutanh'), get_bloginfo('name', 'display') ); ?>
 				</a>
 			</div><!-- .site-info -->
